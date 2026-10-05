@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>m!ntmoch! Portfolio</title>
+    <!--
+        転送専用のページ。ポートフォリオ本体は https://mm-g326.github.io/portfolio/ にある。
+        https://mm-g326.github.io/ や、その下のページ（例: /work-detail.html?id=2512EZ2）に来た人を、
+        /portfolio/ の同じページへ送る。index.html と 404.html は同じ中身。
+    -->
+    <script>
+        (function () {
+            var base = '/portfolio';
+            var path = location.pathname;
+            if (path.indexOf(base + '/') === 0 || path === base) path = '/';
+            location.replace(base + path + location.search + location.hash);
+        })();
+    </script>
+    <!-- JavaScript が動かない環境向けの保険 -->
+    <meta http-equiv="refresh" content="0; url=/portfolio/">
+</head>
+
+<body>
+    <p><a href="/portfolio/">m!ntmoch! Portfolio へ移動します</a></p>
+</body>
+
+</html>
